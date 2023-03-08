@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting Table</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sorting Table</h1>
+    <form>
+        <label for="dataFile">Select a file (csv or json):</label>
+        <input type="file" id="dataFile" name="dataFile">
+        <button type="button" onclick="loadTable()">Load Table</button>
+        <br>
+        <label for="assignedTo">Filter by:</label>
+        <select id="assignedTo" onchange="filterTable()">
+			<option value="">All</option>
+		</select>
+    </form>
+    <table id="data">
+        <thead>
+            <tr></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
